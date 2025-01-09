@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing UseLocalSearchParams Snapshot practice 1`] = `
+<View>
+  <Text
+    testID="profile-id"
+  >
+    No Profile ID provided
+  </Text>
+</View>
+`;
