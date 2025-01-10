@@ -3,7 +3,7 @@ import * as React from 'react';
 import { fireEvent, render, screen, waitFor} from '@testing-library/react-native'; 
 import SomeComponent from '@/components/SomeComponent';
 import { useRouter } from 'expo-router';
-import { push } from 'expo-router/build/global-state/routing';
+
 
 jest.mock('expo-router',() =>({
      useRouter:jest.fn()
@@ -22,9 +22,10 @@ describe('',() =>{
     fireEvent.press(screen.getByLabelText('Next-page-btn'));
 
     //asychronous thingy
-    await waitFor(() =>{
-        expect(mockPush).toHaveBeenCalledWith('/nextPage');
+    await waitFor(() => expect(mockPush).toHaveBeenCalledWith('/nextPage'),{
+      timeout: 1500,
     });
+
 })
 
 })

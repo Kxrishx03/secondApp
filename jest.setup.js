@@ -1,6 +1,3 @@
-const { router } = require("expo-router");
-const { navigate, push, replace } = require("expo-router/build/global-state/routing");
-
 jest.mock('@react-native-community/async-storage', () => ({
     setItem: jest.fn(),
   }));
@@ -13,5 +10,7 @@ jest.mock('@react-native-community/async-storage', () => ({
   jest.mock('@react-navigation/stack', () => ({
     createStackNavigator: jest.fn(),
   }));
+
+
 
   
